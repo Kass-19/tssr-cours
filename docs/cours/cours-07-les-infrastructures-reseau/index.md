@@ -1,9 +1,9 @@
 # Cours 7 - Les infrastructures réseau
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** 17/08/2026 au 28/08/2026
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Hasan KURTULUS, Maha NACEUR et Romain GAUTIER
 
 Retrouve ici l'ensemble des modules de ce cours.
 
