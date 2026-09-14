@@ -128,8 +128,8 @@ _À compléter._
 
 <div id="quiz-cours-08-les-services-reseau-en-environnement-microsoft-module-3-les-strategie-de-groupe"></div>
 
-<script type="application/json" id="quiz-cours-08-les-services-reseau-en-environnement-microsoft-module-3-les-strategie-de-groupe-data">
- {
+<script type="application/json" id="quiz-cours-08-les-services-reseau-en-environnement-microsoft-module-3-les-strategies-de-groupe-data">[
+  {
     "question": "Sur quels types d'objets agissent principalement les GPO (Group Policy Object) ?",
     "options": [
       "Les ordinateurs et les utilisateurs du domaine",
@@ -351,6 +351,7 @@ _À compléter._
   }
 ]
 </script>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
