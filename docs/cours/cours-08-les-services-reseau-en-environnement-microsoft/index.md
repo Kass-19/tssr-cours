@@ -1,9 +1,9 @@
 # Cours 8 - Les services réseau en environnement Microsoft
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** *Du 31/08/2026 au 11/09/2026*
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Cédric RICHEZ et François GRELIER
 
 Retrouve ici l'ensemble des modules de ce cours.
 
