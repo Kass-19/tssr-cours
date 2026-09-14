@@ -1,9 +1,9 @@
 # Cours 4 - Administration du distribution GNU-Linux
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** 13/07/2026 au 24/07/2026
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Alexandre CHAUSSIER et François GRELIER
 
 Retrouve ici l'ensemble des modules de ce cours.
 
