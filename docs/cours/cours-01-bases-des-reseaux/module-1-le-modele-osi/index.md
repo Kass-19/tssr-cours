@@ -8,7 +8,22 @@ _À compléter._
 
 ## 🖼️ Résumé visuel
 
-_À compléter. Tu peux utiliser un diagramme Mermaid — voir un exemple de syntaxe dans le module [L'adressage IPv4](../../cours-01-bases-des-reseaux/module-3-l-adressage-ipv4/index.md)._
+Le modèle OSI découpe une communication en **sept responsabilités complémentaires**. À l’émission, chaque couche prépare les données pour la couche inférieure ; à la réception, le traitement se fait dans l’ordre inverse.
+
+<figure class="tssr-figure">
+  <div class="tssr-figure__canvas">
+    <div class="tssr-osi-stack" role="img" aria-label="Les sept couches du modèle OSI avec leurs rôles, exemples et unités de données">
+      <div class="tssr-osi-layer" style="--layer-color:#7c5bc4"><span class="tssr-osi-layer__number">7</span><strong>Application</strong><span>Services visibles : HTTP, DNS, SMTP</span><small>Données</small></div>
+      <div class="tssr-osi-layer" style="--layer-color:#8b5fc7"><span class="tssr-osi-layer__number">6</span><strong>Présentation</strong><span>Format, chiffrement TLS, compression</span><small>Données</small></div>
+      <div class="tssr-osi-layer" style="--layer-color:#7568cf"><span class="tssr-osi-layer__number">5</span><strong>Session</strong><span>Ouverture, maintien et reprise du dialogue</span><small>Données</small></div>
+      <div class="tssr-osi-layer" style="--layer-color:#c47a18"><span class="tssr-osi-layer__number">4</span><strong>Transport</strong><span>TCP/UDP, fiabilité et numéros de port</span><small>Segment</small></div>
+      <div class="tssr-osi-layer" style="--layer-color:#3978c5"><span class="tssr-osi-layer__number">3</span><strong>Réseau</strong><span>IPv4/IPv6, choix du chemin, routeur</span><small>Paquet</small></div>
+      <div class="tssr-osi-layer" style="--layer-color:#159574"><span class="tssr-osi-layer__number">2</span><strong>Liaison</strong><span>Ethernet, adresse MAC, commutateur</span><small>Trame</small></div>
+      <div class="tssr-osi-layer" style="--layer-color:#596675"><span class="tssr-osi-layer__number">1</span><strong>Physique</strong><span>Câble, fibre, radio et signaux</span><small>Bits</small></div>
+    </div>
+  </div>
+  <figcaption>Lecture de haut en bas à l’émission : des données applicatives jusqu’aux bits transportés sur le support.</figcaption>
+</figure>
 
 ## 📖 Cours consolidé
 
