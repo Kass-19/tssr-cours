@@ -1,9 +1,9 @@
 # Cours 10 - Mise en situation professionnelle : service réseau
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** 21/09/2026
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Cédric RICHEZ
 
 *Ce cours ne comporte pas de modules détaillés dans le référentiel : utilise cette page comme un module unique.*
 
