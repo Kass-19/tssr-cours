@@ -404,13 +404,128 @@ _À compléter._
 <script type="application/json" id="quiz-cours-07-les-infrastructures-reseau-module-1-la-configuration-initiale-des-peripheriques-data">
 [
   {
-    "question": "Exemple de question à remplacer",
-    "options": ["Réponse A", "Réponse B", "Réponse C"],
+    "question": "Pour configurer un équipement Cisco tout juste sorti du carton, sans aucune configuration existante, quel type de connexion doit-on utiliser ?",
+    "options": ["Le port Ethernet WAN, via une adresse IP par défaut", "Le port USB de données, via un transfert de fichier", "Le port console, via le câble bleu fourni et un émulateur de terminal", "Le port AUX, via une connexion Wi-Fi"],
+    "correctIndex": 2,
+    "explanation": "Un équipement neuf n'a aucune adresse IP configurée : il est donc injoignable à distance. Seule une connexion physique locale via le port console permet d'y accéder pour la première fois."
+  },
+  {
+    "question": "Quels sont les paramètres corrects pour établir une connexion console avec PuTTY ?",
+    "options": ["Connexion série, port COM correspondant au câble, vitesse 9600 bauds", "Connexion SSH, port 22, vitesse 115200 bauds", "Connexion série, port COM correspondant au câble, vitesse 115200 bauds", "Connexion Telnet, port 23, vitesse 9600 bauds"],
     "correctIndex": 0,
-    "explanation": "Explique ici pourquoi cette réponse est correcte."
+    "explanation": "La connexion console est une connexion série locale (pas réseau) et Cisco IOS attend un débit standard de 9600 bauds sur cette liaison."
+  },
+  {
+    "question": "Quelle commande permet d'afficher la version de Cisco IOS installée sur un équipement ?",
+    "options": ["show ios", "display version", "version show", "show version"],
+    "correctIndex": 3,
+    "explanation": "La syntaxe Cisco IOS suit toujours le schéma commande + mots-clés, ici la commande show combinée au mot-clé version."
+  },
+  {
+    "question": "Quel symbole d'invite caractérise le mode utilisateur sous Cisco IOS ?",
+    "options": ["#", ">", "(config)#", "$"],
+    "correctIndex": 1,
+    "explanation": "Le mode utilisateur, mode par défaut à la connexion, se reconnaît à l'invite se terminant par le symbole >, avant tout passage en mode privilégié."
+  },
+  {
+    "question": "Depuis le mode utilisateur, quelle commande permet de passer en mode privilégié ?",
+    "options": ["configure terminal", "login", "privilege exec", "enable"],
+    "correctIndex": 3,
+    "explanation": "enable fait basculer l'invite du symbole > vers le symbole #, donnant accès à davantage de commandes d'administration et de consultation."
+  },
+  {
+    "question": "Depuis le mode privilégié, quelle commande permet d'accéder au mode de configuration globale ?",
+    "options": ["configure terminal", "enable", "global configuration", "config global"],
+    "correctIndex": 0,
+    "explanation": "configure terminal fait passer de l'invite # à l'invite (config)#, seul mode depuis lequel on peut ensuite atteindre les sous-modes de configuration plus spécifiques."
+  },
+  {
+    "question": "Depuis un sous-mode de configuration (par exemple line console 0), combien de fois faut-il taper exit pour revenir en mode utilisateur ?",
+    "options": ["1", "2", "3", "4"],
+    "correctIndex": 2,
+    "explanation": "exit ne remonte que d'un seul niveau à la fois : il faut donc l'enchaîner trois fois pour passer du sous-mode à la configuration globale, puis au mode privilégié, puis au mode utilisateur."
+  },
+  {
+    "question": "Quelle est la différence essentielle entre les commandes exit et end en mode de configuration ?",
+    "options": ["end remonte d'un seul niveau, exit revient directement en mode privilégié", "exit remonte d'un seul niveau, end revient directement en mode privilégié quel que soit le sous-mode", "exit et end ont exactement le même effet, ils sont interchangeables", "exit ferme la session en cours, end sauvegarde la configuration"],
+    "correctIndex": 1,
+    "explanation": "C'est un piège classique : exit fait remonter niveau par niveau, alors qu'un seul end suffit pour revenir directement en mode privilégié depuis n'importe quel sous-mode de configuration."
+  },
+  {
+    "question": "À quoi sert le point d'interrogation ? saisi dans l'interface Cisco IOS ?",
+    "options": ["Il affiche les commandes ou options disponibles à l'endroit où il est saisi", "Il affiche l'historique des commandes déjà saisies", "Il affiche la version de Cisco IOS", "Il redémarre immédiatement l'équipement"],
+    "correctIndex": 0,
+    "explanation": "C'est l'aide intégrée de Cisco IOS : elle permet de découvrir les commandes disponibles ou leur syntaxe sans avoir à toutes les connaître par cœur."
+  },
+  {
+    "question": "Dans la commande show ip interface gigabitEthernet 0/1, que représentent gigabitEthernet et 0/1 ?",
+    "options": ["Des mots-clés fixes de la syntaxe", "La commande principale", "Des caractères délimiteurs", "Des arguments précisant le type et le numéro de l'interface"],
+    "correctIndex": 3,
+    "explanation": "Contrairement aux mots-clés show et ip interface qui sont fixes, gigabitEthernet et 0/1 varient selon le contexte : ce sont donc des arguments."
+  },
+  {
+    "question": "Que signale le symbole ^ affiché par l'interpréteur de commandes Cisco IOS ?",
+    "options": ["Le début d'un commentaire", "L'endroit précis où une erreur de syntaxe a été détectée", "Que la commande a été exécutée avec succès", "La fin de la commande"],
+    "correctIndex": 1,
+    "explanation": "Le ^ est positionné juste sous l'endroit précis où le problème a été détecté, ce qui permet de repérer rapidement une erreur, même sur une commande longue."
+  },
+  {
+    "question": "Quelle commande permet de changer le nom d'un équipement Cisco ?",
+    "options": ["name", "set-name", "hostname", "device-name"],
+    "correctIndex": 2,
+    "explanation": "hostname, saisie en mode de configuration globale, attribue un nom à l'équipement pour le distinguer facilement des autres, tous identiques par défaut à la sortie du carton."
+  },
+  {
+    "question": "Pourquoi est-il recommandé de rédiger une bannière (banner motd) uniquement en caractères ASCII, sans accents ?",
+    "options": ["Parce que Cisco IOS ne gère pas toujours correctement les caractères accentués", "Parce que les caractères accentués ralentissent le démarrage de l'équipement", "Parce que la bannière doit rester illisible pour des raisons de sécurité", "Parce que les caractères accentués sont interdits par la norme Ethernet"],
+    "correctIndex": 0,
+    "explanation": "Une bannière contenant des accents ou caractères spéciaux risque de s'afficher de façon incorrecte, d'où la recommandation de rester en ASCII simple, éventuellement en anglais."
+  },
+  {
+    "question": "Quelle commande, saisie en mode line console 0, permet de définir le mot de passe demandé à la connexion via le câble console ?",
+    "options": ["enable secret", "service password-encryption", "banner motd", "password"],
+    "correctIndex": 3,
+    "explanation": "Une fois le mot de passe défini avec password, la commande login active effectivement sa demande à chaque connexion sur cette ligne."
+  },
+  {
+    "question": "Quelles lignes faut-il configurer pour protéger les connexions distantes Telnet ou SSH ?",
+    "options": ["Les lignes console (line console 0)", "Les lignes VTY (line vty 0 15)", "Les lignes AUX", "Les lignes TTY"],
+    "correctIndex": 1,
+    "explanation": "Les connexions distantes passent par les lignes VTY, dont le mot de passe peut être différent de celui configuré pour la console."
+  },
+  {
+    "question": "Quelle commande permet de chiffrer/masquer les mots de passe qui apparaissent en clair dans le fichier de configuration ?",
+    "options": ["enable secret", "crypt password", "service password-encryption", "hide password"],
+    "correctIndex": 2,
+    "explanation": "Sans cette commande, les mots de passe des lignes console ou VTY restent lisibles en clair par quiconque récupère le fichier de configuration."
+  },
+  {
+    "question": "Pour protéger l'accès au mode privilégié, quelle méthode Cisco recommande-t-il en priorité pour un examen TSSR ?",
+    "options": ["enable secret, car il stocke le mot de passe de façon chiffrée et sécurisée", "enable password, car il est plus simple à configurer", "service password-encryption seule, car elle suffit à sécuriser tous les mots de passe", "no password, car cela empêche tout accès"],
+    "correctIndex": 0,
+    "explanation": "enable secret est un mécanisme plus robuste qu'enable password : il chiffre le mot de passe de manière sécurisée, alors que service password-encryption seule reste une protection relativement basique pour ce niveau d'accès."
+  },
+  {
+    "question": "Au démarrage d'un équipement Cisco, quelle étape, stockée dans la ROM, vérifie le CPU, la RAM, la mémoire Flash et les autres composants matériels ?",
+    "options": ["Le chargement de la startup-config", "Le mode Setup", "Le chargement de Cisco IOS depuis la Flash", "Le POST (Power-On Self-Test)"],
+    "correctIndex": 3,
+    "explanation": "Le POST est la toute première étape du démarrage : il s'assure que le matériel fonctionne correctement avant même que Cisco IOS ne soit chargé."
+  },
+  {
+    "question": "Où est stockée la running-config, et quelle conséquence cela a-t-il ?",
+    "options": ["En NVRAM, mémoire non volatile : elle est conservée après un redémarrage", "En mémoire Flash, chargée automatiquement au démarrage", "En RAM, mémoire volatile : elle est perdue à chaque redémarrage si elle n'a pas été sauvegardée", "Sur un serveur TFTP distant, accessible uniquement par le réseau"],
+    "correctIndex": 2,
+    "explanation": "La RAM ne conserve rien hors tension : toute modification faite dans la running-config disparaît donc au redémarrage tant qu'elle n'a pas été copiée dans la startup-config."
+  },
+  {
+    "question": "Quelle commande permet de sauvegarder la configuration active pour qu'elle survive à un redémarrage de l'équipement ?",
+    "options": ["copy startup-config running-config", "copy running-config startup-config", "erase running-config", "reload"],
+    "correctIndex": 1,
+    "explanation": "La commande copie la configuration active (RAM) vers la startup-config (NVRAM) ; inverser le sens de la commande écraserait au contraire la configuration active avec l'ancienne configuration de démarrage."
   }
 ]
 </script>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
