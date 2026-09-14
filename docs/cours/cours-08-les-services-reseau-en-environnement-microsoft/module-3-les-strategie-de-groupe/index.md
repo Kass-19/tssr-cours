@@ -349,8 +349,8 @@ _À compléter._
     "correctIndex": 3,
     "explanation": "Le mode de déploiement (GPO ou installation manuelle) influence les droits et le niveau de contrôle dont disposera l'utilisateur sur l'imprimante, ce qui peut avoir un impact concret sur son expérience d'impression et sa capacité à gérer les files d'attente."
   }
-]
-</script>
+]</script>
+
 
 
 <script>
