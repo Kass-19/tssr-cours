@@ -11,12 +11,10 @@ Retrouve ici l'ensemble des modules de ce cours.
   <a class="tssr-card" href="module-1-administration-windows/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 1 : Administration Windows</span>
-    <span class="tssr-card-desc">À compléter.</span>
   </a>
   <a class="tssr-card" href="module-2-active-directory/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 2 : Active Directory</span>
-    <span class="tssr-card-desc">À compléter.</span>
   </a>
   <a class="tssr-card" href="module-3-les-strategie-de-groupe/">
     <span class="tssr-card-icon">📗</span>
