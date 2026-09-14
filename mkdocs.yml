@@ -36,7 +36,6 @@ theme:
     repo: fontawesome/brands/github
     edit: material/pencil
   features:
-    - navigation.sections
     - navigation.indexes
     - navigation.top
     - navigation.footer
