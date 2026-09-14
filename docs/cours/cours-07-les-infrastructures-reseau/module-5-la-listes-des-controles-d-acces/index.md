@@ -262,7 +262,15 @@ Dans cet exemple : l'ACL **150**, en entrée, autorise le trafic de la machine A
 
 ## ✅ Points clés à retenir
 
-_À compléter._
+- Une ACL est une liste d'ACE, évaluées **dans l'ordre**, avec un **refus implicite** systématique en fin de liste. ⚠️ Un routeur sorti du carton n'a aucune ACL configurée par défaut.
+- ACL **standard** = filtrage sur l'adresse IP **source** uniquement (couche 3) ; ACL **étendue** = filtrage sur source, destination, protocole et ports (couches 3 et 4).
+- ⚠️ Piège classique : une ACL vide appliquée à une interface bloque tout le trafic (deny implicite) ; toujours démarrer par un `permit` explicite puis affiner.
+- 📌 `ip access-list` (nommée ou numérotée, interactive) est recommandée face à `access-list` (uniquement numérotée pour les ACL standard) : plus lisible et plus simple à modifier.
+- Les ACL Cisco utilisent un **masque inversé** (wildcard mask) ; `host` remplace un masque /32, `any` remplace `0.0.0.0 255.255.255.255`.
+- Une **ACL standard** se place au plus près de la **destination** (elle ne filtre que sur la source) ; une **ACL étendue** se place au plus près de la **source** (elle peut filtrer sur destination/port, donc bloquer le trafic le plus tôt possible).
+- La **matrice de flux** (5 critères : IP source, IP destination, protocole, port source, port destination) est un préalable indispensable à la conception d'un filtrage cohérent.
+- Le mot-clé **established** permet de faire fonctionner un routeur Cisco comme un pare-feu avec état (*stateful*), en autorisant automatiquement le retour d'une connexion déjà initiée, sans avoir à créer une ACL symétrique complète dans les deux sens.
+- Commandes de vérification essentielles : `show access-list` (compteurs de correspondance), `show ip interface <interface>` (ACL appliquée in/out), `clear access-list counters` (remise à zéro des compteurs).
 
 ## 📝 Fiche de révision
 
