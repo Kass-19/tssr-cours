@@ -1,9 +1,9 @@
 # Cours 6 - Sensibilisation ITIL et Gestion de parc
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** 03/08/2026 au 14/08/2026
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Alexandre CHAUSSIER
 
 Retrouve ici l'ensemble des modules de ce cours.
 
