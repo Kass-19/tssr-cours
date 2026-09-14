@@ -1,0 +1,257 @@
+site_name: TSSR · Mon espace de révision
+site_description: Cours, travaux pratiques, glossaire et mémos de commandes pour la formation TSSR
+site_author: Kassandra
+
+# --- À MODIFIER une fois ton compte GitHub créé (voir README.md, étape "Personnaliser") ---
+site_url: https://TON-PSEUDO-GITHUB.github.io/tssr-cours/
+repo_url: https://github.com/TON-PSEUDO-GITHUB/tssr-cours
+repo_name: tssr-cours
+edit_uri: edit/main/docs/
+# -----------------------------------------------------------------------------------------
+
+theme:
+  name: material
+  language: fr
+  palette:
+    # Mode clair
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Passer en mode sombre
+    # Mode sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: light-green
+      toggle:
+        icon: material/weather-sunny
+        name: Passer en mode clair
+  font:
+    text: Roboto
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - navigation.path
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/filter.js
+  - javascripts/quiz.js
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+      title: Sur cette page
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang: fr
+
+nav:
+  - Accueil: index.md
+  - Cours:
+      - cours/index.md
+      - "Cours 1 · Bases des réseaux":
+          - cours/cours-01-bases-des-reseaux/index.md
+          - "Module 1 : Le modèle OSI": cours/cours-01-bases-des-reseaux/module-1-le-modele-osi/index.md
+          - "Module 2 : Les unités informatiques": cours/cours-01-bases-des-reseaux/module-2-les-unites-informatiques/index.md
+          - "Module 3 : l'adressage IPv4": cours/cours-01-bases-des-reseaux/module-3-l-adressage-ipv4/index.md
+          - "Module 4 : La communication": cours/cours-01-bases-des-reseaux/module-4-la-communication/index.md
+          - "Module 5 : Les premières commandes": cours/cours-01-bases-des-reseaux/module-5-les-premieres-commandes/index.md
+          - "Module 6 : L'adressage IPv6": cours/cours-01-bases-des-reseaux/module-6-l-adressage-ipv6/index.md
+      - "Cours 2 · Système client microsoft":
+          - cours/cours-02-systeme-client-microsoft/index.md
+          - "Module 1 : Les systèmes d'exploitation et Mocrofot Windows 10": cours/cours-02-systeme-client-microsoft/module-1-les-systemes-d-exploitation-et-mocrofot-windows-10/index.md
+          - "Module 2 : Installation de Windows 10": cours/cours-02-systeme-client-microsoft/module-2-installation-de-windows-10/index.md
+          - "Module 2bis : VMWare Workstation": cours/cours-02-systeme-client-microsoft/module-2bis-vmware-workstation/index.md
+          - "Module 3 : Intéragire avec Windows 10": cours/cours-02-systeme-client-microsoft/module-3-interagire-avec-windows-10/index.md
+          - "Module 4 : La gestion du stockage": cours/cours-02-systeme-client-microsoft/module-4-la-gestion-du-stockage/index.md
+          - "Module 5 : Les utilisateurs et les groupes": cours/cours-02-systeme-client-microsoft/module-5-les-utilisateurs-et-les-groupes/index.md
+          - "Module 6 : La sécurité NTFS et les ACL": cours/cours-02-systeme-client-microsoft/module-6-la-securite-ntfs-et-les-acl/index.md
+          - "Module 7 : La gestion du réseau et du pare-feu": cours/cours-02-systeme-client-microsoft/module-7-la-gestion-du-reseau-et-du-pare-feu/index.md
+          - "Module 8 : Le partage de ressources": cours/cours-02-systeme-client-microsoft/module-8-le-partage-de-ressources/index.md
+          - "Module 9 : Les pilotes et imprimantes": cours/cours-02-systeme-client-microsoft/module-9-les-pilotes-et-imprimantes/index.md
+          - "Module 10 : Maintenance du système": cours/cours-02-systeme-client-microsoft/module-10-maintenance-du-systeme/index.md
+          - "Module 11 : Aller plus loin avec PowerShell": cours/cours-02-systeme-client-microsoft/module-11-aller-plus-loin-avec-powershell/index.md
+          - "Module 12 : Introduction à la capture et au déploiement d'images": cours/cours-02-systeme-client-microsoft/module-12-introduction-a-la-capture-et-au-deploiement-d-images/index.md
+          - "Module 13 : Les stratégie de groupe local": cours/cours-02-systeme-client-microsoft/module-13-les-strategie-de-groupe-local/index.md
+      - "Cours 3 · Utilisateur d'une distribution GNU-Linux":
+          - cours/cours-03-utilisateur-d-une-distribution-gnu-linux/index.md
+          - "Module 1 : Introduction à Unix-Linux": cours/cours-03-utilisateur-d-une-distribution-gnu-linux/module-1-introduction-a-unix-linux/index.md
+          - "Module 2 : Découverte du système d'exploitation Linux": cours/cours-03-utilisateur-d-une-distribution-gnu-linux/module-2-decouverte-du-systeme-d-exploitation-linux/index.md
+          - "Module 3 : Découverte du shell et premières commandes": cours/cours-03-utilisateur-d-une-distribution-gnu-linux/module-3-decouverte-du-shell-et-premieres-commandes/index.md
+          - "Module 4 : Fichier et dossier sous Linux": cours/cours-03-utilisateur-d-une-distribution-gnu-linux/module-4-fichier-et-dossier-sous-linux/index.md
+          - "Module 5 : Utiliser des fichiers sous Linux": cours/cours-03-utilisateur-d-une-distribution-gnu-linux/module-5-utiliser-des-fichiers-sous-linux/index.md
+          - "Module 6 : Spécificité du shell Bash": cours/cours-03-utilisateur-d-une-distribution-gnu-linux/module-6-specificite-du-shell-bash/index.md
+          - "Module 7 : éditer du texte sous Linux": cours/cours-03-utilisateur-d-une-distribution-gnu-linux/module-7-editer-du-texte-sous-linux/index.md
+          - "Module 8 : Mécanisme avancés de Linux et Bash": cours/cours-03-utilisateur-d-une-distribution-gnu-linux/module-8-mecanisme-avances-de-linux-et-bash/index.md
+      - "Cours 4 · Administration du distribution GNU-Linux":
+          - cours/cours-04-administration-du-distribution-gnu-linux/index.md
+          - "Module 1 : Présentation de Debian GNU-Linux": cours/cours-04-administration-du-distribution-gnu-linux/module-1-presentation-de-debian-gnu-linux/index.md
+          - "Module 2 : Installation d'une distribution Debian": cours/cours-04-administration-du-distribution-gnu-linux/module-2-installation-d-une-distribution-debian/index.md
+          - "Module 3 : Démarrage d'une distribution DEbian": cours/cours-04-administration-du-distribution-gnu-linux/module-3-demarrage-d-une-distribution-debian/index.md
+          - "Module 4 : Debian en mode maintenance": cours/cours-04-administration-du-distribution-gnu-linux/module-4-debian-en-mode-maintenance/index.md
+          - "Module 5 : Gestion du réseau": cours/cours-04-administration-du-distribution-gnu-linux/module-5-gestion-du-reseau/index.md
+          - "Module 6 : Gestion des paquets logiciel": cours/cours-04-administration-du-distribution-gnu-linux/module-6-gestion-des-paquets-logiciel/index.md
+          - "Module 7 : Gestion des espaces de stockages": cours/cours-04-administration-du-distribution-gnu-linux/module-7-gestion-des-espaces-de-stockages/index.md
+          - "Module 8 : Gestion des espace de stockage avancée - LVM": cours/cours-04-administration-du-distribution-gnu-linux/module-8-gestion-des-espace-de-stockage-avancee-lvm/index.md
+          - "Module 9 : Gestion des espaces de stockage - File System": cours/cours-04-administration-du-distribution-gnu-linux/module-9-gestion-des-espaces-de-stockage-file-system/index.md
+          - "Module 10 : Gestion des utilisateurs et des groupes": cours/cours-04-administration-du-distribution-gnu-linux/module-10-gestion-des-utilisateurs-et-des-groupes/index.md
+          - "Module 11 : Droits sur les fichiers et répertoires": cours/cours-04-administration-du-distribution-gnu-linux/module-11-droits-sur-les-fichiers-et-repertoires/index.md
+          - "Module 12 : Maintenance d'un système en production": cours/cours-04-administration-du-distribution-gnu-linux/module-12-maintenance-d-un-systeme-en-production/index.md
+      - "Cours 5 · Mise en situation professionnelle : système client": cours/cours-05-mise-en-situation-professionnelle-systeme-client/index.md
+      - "Cours 6 · Sensibilisation ITIL et Gestion de parc":
+          - cours/cours-06-sensibilisation-itil-et-gestion-de-parc/index.md
+          - "Module 1 : Présentation d'ITIL et Gestion de parc": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-1-presentation-d-itil-et-gestion-de-parc/index.md
+          - "Module 2 : La gestion des services": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-2-la-gestion-des-services/index.md
+          - "Module 3 : Les publications centrales - Stratégie et conception des services": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-3-les-publications-centrales-strategie-et-conception-des-services/index.md
+          - "Module 4 : La transition des services": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-4-la-transition-des-services/index.md
+          - "Module 5 : GLPI": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-5-glpi/index.md
+          - "Module 6 : Les publications centrale - Exploitation des services": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-6-les-publications-centrale-exploitation-des-services/index.md
+          - "Module 7 : Les publications centrales - Amélioration continue des services": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-7-les-publications-centrales-amelioration-continue-des-services/index.md
+          - "Module 8 : Savoirs, savoir-faire et servoir-être": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-8-savoirs-savoir-faire-et-servoir-etre/index.md
+          - "Module 9 : Assistance avec GLPI": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-9-assistance-avec-glpi/index.md
+          - "Module 10 : Présentation de l'environnement - Installation de GLPI": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-10-presentation-de-l-environnement-installation-de-glpi/index.md
+          - "Module 11 : Authentification AD - Habilitations": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-11-authentification-ad-habilitations/index.md
+          - "Module 12 : Gestion de parc - Inventaire informatique": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-12-gestion-de-parc-inventaire-informatique/index.md
+          - "Module 13 : Assistance - Traitement automatisés des tickets": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-13-assistance-traitement-automatises-des-tickets/index.md
+          - "Module 14 : Les bases de MySQL MariaDB": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-14-les-bases-de-mysql-mariadb/index.md
+          - "Module 15 : Présetnation des plugins - Inventaire avec FusionInventory": cours/cours-06-sensibilisation-itil-et-gestion-de-parc/module-15-presetnation-des-plugins-inventaire-avec-fusioninventory/index.md
+      - "Cours 7 · Les infrastructures réseau":
+          - cours/cours-07-les-infrastructures-reseau/index.md
+          - "Module 1 : La configuration initiale des périphériques": cours/cours-07-les-infrastructures-reseau/module-1-la-configuration-initiale-des-peripheriques/index.md
+          - "Module 2 : La commutation Ethernet": cours/cours-07-les-infrastructures-reseau/module-2-la-commutation-ethernet/index.md
+          - "Module 3 : Le routage": cours/cours-07-les-infrastructures-reseau/module-3-le-routage/index.md
+          - "Module 4 : Les réseaux sans fil": cours/cours-07-les-infrastructures-reseau/module-4-les-reseaux-sans-fil/index.md
+          - "Module 5 : La listes des contrôles d'accès": cours/cours-07-les-infrastructures-reseau/module-5-la-listes-des-controles-d-acces/index.md
+          - "Module 6 : La traduction d'adesse réseau": cours/cours-07-les-infrastructures-reseau/module-6-la-traduction-d-adesse-reseau/index.md
+          - "Module 7 : La sauvegarde et la maintenance": cours/cours-07-les-infrastructures-reseau/module-7-la-sauvegarde-et-la-maintenance/index.md
+      - "Cours 8 · Les services réseau en environnement Microsoft":
+          - cours/cours-08-les-services-reseau-en-environnement-microsoft/index.md
+          - "Module 1 : Administration Windows": cours/cours-08-les-services-reseau-en-environnement-microsoft/module-1-administration-windows/index.md
+          - "Module 2 : Active Directory": cours/cours-08-les-services-reseau-en-environnement-microsoft/module-2-active-directory/index.md
+          - "Module 3 : Les stratégie de groupe": cours/cours-08-les-services-reseau-en-environnement-microsoft/module-3-les-strategie-de-groupe/index.md
+          - "Module 4 : Le routage": cours/cours-08-les-services-reseau-en-environnement-microsoft/module-4-le-routage/index.md
+          - "Module 5 : Le service DHCP": cours/cours-08-les-services-reseau-en-environnement-microsoft/module-5-le-service-dhcp/index.md
+          - "Module 6 : Le service DNS": cours/cours-08-les-services-reseau-en-environnement-microsoft/module-6-le-service-dns/index.md
+      - "Cours 9 · Les services réseau en environnement Linux":
+          - cours/cours-09-les-services-reseau-en-environnement-linux/index.md
+          - "Module 1 : Introduction": cours/cours-09-les-services-reseau-en-environnement-linux/module-1-introduction/index.md
+          - "Module 2 : Adressage réseau": cours/cours-09-les-services-reseau-en-environnement-linux/module-2-adressage-reseau/index.md
+          - "Module 3 : Routage et traduction d'adresses": cours/cours-09-les-services-reseau-en-environnement-linux/module-3-routage-et-traduction-d-adresses/index.md
+          - "Module 4 : Administration à distance": cours/cours-09-les-services-reseau-en-environnement-linux/module-4-administration-a-distance/index.md
+          - "Module 5 : DNS résolveur": cours/cours-09-les-services-reseau-en-environnement-linux/module-5-dns-resolveur/index.md
+          - "Module 6 : DHCP": cours/cours-09-les-services-reseau-en-environnement-linux/module-6-dhcp/index.md
+          - "Module 7 : DNS autoritaire sur zone": cours/cours-09-les-services-reseau-en-environnement-linux/module-7-dns-autoritaire-sur-zone/index.md
+      - "Cours 10 · Mise en situation professionnelle : service réseau": cours/cours-10-mise-en-situation-professionnelle-service-reseau/index.md
+      - "Cours 11 · Initiation au scripting Bash":
+          - cours/cours-11-initiation-au-scripting-bash/index.md
+          - "Module 1 : Analyse": cours/cours-11-initiation-au-scripting-bash/module-1-analyse/index.md
+          - "Module 2 : Ecriture des scripts": cours/cours-11-initiation-au-scripting-bash/module-2-ecriture-des-scripts/index.md
+          - "Module 3 : Premières commandes utiles aux scripts": cours/cours-11-initiation-au-scripting-bash/module-3-premieres-commandes-utiles-aux-scripts/index.md
+          - "Module 4 : Les variables dans les scripts": cours/cours-11-initiation-au-scripting-bash/module-4-les-variables-dans-les-scripts/index.md
+          - "Module 5 : Les caractères spéciaux du Shell": cours/cours-11-initiation-au-scripting-bash/module-5-les-caracteres-speciaux-du-shell/index.md
+          - "Module 6 : Exécution conditionnelle": cours/cours-11-initiation-au-scripting-bash/module-6-execution-conditionnelle/index.md
+          - "Module 7 : Les structures de boucle": cours/cours-11-initiation-au-scripting-bash/module-7-les-structures-de-boucle/index.md
+          - "Module 8 : Les fonctions": cours/cours-11-initiation-au-scripting-bash/module-8-les-fonctions/index.md
+      - "Cours 12 · Initiation à Powershell":
+          - cours/cours-12-initiation-a-powershell/index.md
+          - "Module 1 : Présentation du langage PowerShell": cours/cours-12-initiation-a-powershell/module-1-presentation-du-langage-powershell/index.md
+          - "Module 2 : PowerShell, langage-objet": cours/cours-12-initiation-a-powershell/module-2-powershell-langage-objet/index.md
+          - "Module 3 : Maniputation des objets": cours/cours-12-initiation-a-powershell/module-3-maniputation-des-objets/index.md
+          - "Module 4 : Les structures et variables": cours/cours-12-initiation-a-powershell/module-4-les-structures-et-variables/index.md
+          - "Module 5 : Réalisation d'un script": cours/cours-12-initiation-a-powershell/module-5-realisation-d-un-script/index.md
+          - "Module 6 : Pour aller plus loin": cours/cours-12-initiation-a-powershell/module-6-pour-aller-plus-loin/index.md
+      - "Cours 13 · Virtualisation de serveurs":
+          - cours/cours-13-virtualisation-de-serveurs/index.md
+          - "Module 1 : Présentation": cours/cours-13-virtualisation-de-serveurs/module-1-presentation/index.md
+          - "Module 2 : Les applications de virtualisation": cours/cours-13-virtualisation-de-serveurs/module-2-les-applications-de-virtualisation/index.md
+          - "Module 3 : La virtualisation de serveurs": cours/cours-13-virtualisation-de-serveurs/module-3-la-virtualisation-de-serveurs/index.md
+          - "Module 4 : Découverte d'Hyper-V": cours/cours-13-virtualisation-de-serveurs/module-4-decouverte-d-hyper-v/index.md
+          - "Module 5 : Les composants de l'infrastructure vSphere": cours/cours-13-virtualisation-de-serveurs/module-5-les-composants-de-l-infrastructure-vsphere/index.md
+          - "Module 6 : La gestion du réseau": cours/cours-13-virtualisation-de-serveurs/module-6-la-gestion-du-reseau/index.md
+          - "Module 7 : La gestion du stockage": cours/cours-13-virtualisation-de-serveurs/module-7-la-gestion-du-stockage/index.md
+          - "Module 8 : La gestion du datacenter": cours/cours-13-virtualisation-de-serveurs/module-8-la-gestion-du-datacenter/index.md
+      - "Cours 14 · Messagerie Cloud":
+          - cours/cours-14-messagerie-cloud/index.md
+          - "Module 1 : Les composantes du Cloud et de Microsoft 365": cours/cours-14-messagerie-cloud/module-1-les-composantes-du-cloud-et-de-microsoft-365/index.md
+          - "Module 2 : Administration de Microsoft 365": cours/cours-14-messagerie-cloud/module-2-administration-de-microsoft-365/index.md
+          - "Module 3 : Sécurité et conformité": cours/cours-14-messagerie-cloud/module-3-securite-et-conformite/index.md
+          - "Module 4 : Services complémentaire": cours/cours-14-messagerie-cloud/module-4-services-complementaire/index.md
+      - "Cours 15 · Sauvegarde et restauration":
+          - cours/cours-15-sauvegarde-et-restauration/index.md
+          - "Module 1 : Concepts, enjeux et définition": cours/cours-15-sauvegarde-et-restauration/module-1-concepts-enjeux-et-definition/index.md
+          - "Module 2 : Types de sauvegarde": cours/cours-15-sauvegarde-et-restauration/module-2-types-de-sauvegarde/index.md
+          - "Module 3 : Gestion du stockage": cours/cours-15-sauvegarde-et-restauration/module-3-gestion-du-stockage/index.md
+          - "Module 4 : La redondance des données - RAID": cours/cours-15-sauvegarde-et-restauration/module-4-la-redondance-des-donnees-raid/index.md
+      - "Cours 16 · Réseau et Sécurité":
+          - cours/cours-16-reseau-et-securite/index.md
+          - "Module 1 : Rappel de notion sur le réseau": cours/cours-16-reseau-et-securite/module-1-rappel-de-notion-sur-le-reseau/index.md
+          - "Module 2 : Le pare-feu": cours/cours-16-reseau-et-securite/module-2-le-pare-feu/index.md
+          - "Module 3 : Le NAT": cours/cours-16-reseau-et-securite/module-3-le-nat/index.md
+          - "Module 4 : Exposer des services vers l'extérieur": cours/cours-16-reseau-et-securite/module-4-exposer-des-services-vers-l-exterieur/index.md
+          - "Module 5 : Sécuriser la navigation internet": cours/cours-16-reseau-et-securite/module-5-securiser-la-navigation-internet/index.md
+          - "Module 6 : La gestion des certificats": cours/cours-16-reseau-et-securite/module-6-la-gestion-des-certificats/index.md
+          - "Module 7 : Connecter les collaborateurs pour le télétravail": cours/cours-16-reseau-et-securite/module-7-connecter-les-collaborateurs-pour-le-teletravail/index.md
+          - "Module 8 : Connecter les collaborateurs entre sites": cours/cours-16-reseau-et-securite/module-8-connecter-les-collaborateurs-entre-sites/index.md
+      - "Cours 17 · Services transverses Microsoft (RDS/WDS)":
+          - cours/cours-17-services-transverses-microsoft-rds-wds/index.md
+          - "Module 1 : Mise en place de l'infrastructure": cours/cours-17-services-transverses-microsoft-rds-wds/module-1-mise-en-place-de-l-infrastructure/index.md
+          - "Module 2 : Remote Desktop Services (RDS) - Bureaux distances": cours/cours-17-services-transverses-microsoft-rds-wds/module-2-remote-desktop-services-rds-bureaux-distances/index.md
+          - "Module 3 : Remote Desktop Services (RDS) - Publication d'application": cours/cours-17-services-transverses-microsoft-rds-wds/module-3-remote-desktop-services-rds-publication-d-application/index.md
+          - "Module 4 : Déploiement d'un système d'exploitation": cours/cours-17-services-transverses-microsoft-rds-wds/module-4-deploiement-d-un-systeme-d-exploitation/index.md
+          - "Module 5 : Windows Deployment Services (WDS)": cours/cours-17-services-transverses-microsoft-rds-wds/module-5-windows-deployment-services-wds/index.md
+          - "Module 6 : Microsoft Deployment Toolkit (MDT)": cours/cours-17-services-transverses-microsoft-rds-wds/module-6-microsoft-deployment-toolkit-mdt/index.md
+  - Travaux pratiques:
+      - travaux-pratiques/index.md
+      - "TP - Plan d'adressage IP": travaux-pratiques/cours-01-bases-des-reseaux/tp-plan-adressage.md
+  - Commandes:
+      - commandes/index.md
+      - PowerShell: commandes/powershell.md
+      - Bash: commandes/bash.md
+  - Glossaire: glossaire/index.md
+  - "+ Ajouter du contenu": ajouter-du-contenu.md
