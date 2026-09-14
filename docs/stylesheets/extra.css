@@ -325,3 +325,78 @@
 .tssr-quiz-result.show {
   display: block;
 }
+
+/* --------------------------------------------------------------------
+   5. Schéma "en couches" (modèle OSI, TCP/IP, encapsulation...)
+   -------------------------------------------------------------------- */
+.tssr-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background-color: var(--md-code-bg-color);
+  background-image: radial-gradient(var(--md-default-fg-color--lightest) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.tssr-layer {
+  display: grid;
+  grid-template-columns: 2.4rem 9rem 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--layer-color, var(--md-primary-fg-color));
+  background: color-mix(in srgb, var(--layer-color, var(--md-primary-fg-color)) 12%, var(--md-default-bg-color));
+}
+
+.tssr-layer-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: var(--layer-color, var(--md-primary-fg-color));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.tssr-layer-name {
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+.tssr-layer-desc {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+}
+
+.tssr-layer-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--layer-color, var(--md-primary-fg-color));
+  justify-self: end;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 44em) {
+  .tssr-layer {
+    grid-template-columns: 2.2rem 1fr;
+    grid-template-areas:
+      "num name"
+      "num desc"
+      "num tag";
+    row-gap: 0.15rem;
+  }
+  .tssr-layer-num { grid-area: num; }
+  .tssr-layer-name { grid-area: name; }
+  .tssr-layer-desc { grid-area: desc; }
+  .tssr-layer-tag { grid-area: tag; justify-self: start; }
+}
