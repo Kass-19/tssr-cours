@@ -1,9 +1,9 @@
 # Cours 5 - Mise en situation professionnelle : système client
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** 27/07/2026 au 31/07/2026
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Alexandre CHAUSSIER
 
 *Ce cours ne comporte pas de modules détaillés dans le référentiel : utilise cette page comme un module unique.*
 
