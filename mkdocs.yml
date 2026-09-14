@@ -3,8 +3,8 @@ site_description: Cours, travaux pratiques, glossaire et mémos de commandes pou
 site_author: Kassandra
 
 # --- À MODIFIER une fois ton compte GitHub créé (voir README.md, étape "Personnaliser") ---
-site_url: https://TON-PSEUDO-GITHUB.github.io/tssr-cours/
-repo_url: https://github.com/TON-PSEUDO-GITHUB/tssr-cours
+site_url: https://Kass-19.github.io/tssr-cours/
+repo_url: https://github.com/Kass-19/tssr-cours
 repo_name: tssr-cours
 edit_uri: edit/main/docs/
 # -----------------------------------------------------------------------------------------
