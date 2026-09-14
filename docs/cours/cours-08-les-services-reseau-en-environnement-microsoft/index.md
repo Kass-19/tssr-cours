@@ -19,21 +19,17 @@ Retrouve ici l'ensemble des modules de ce cours.
   <a class="tssr-card" href="module-3-les-strategie-de-groupe/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 3 : Les stratégie de groupe</span>
-    <span class="tssr-card-desc">À compléter.</span>
   </a>
   <a class="tssr-card" href="module-4-le-routage/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 4 : Le routage</span>
-    <span class="tssr-card-desc">À compléter.</span>
   </a>
   <a class="tssr-card" href="module-5-le-service-dhcp/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 5 : Le service DHCP</span>
-    <span class="tssr-card-desc">À compléter.</span>
   </a>
   <a class="tssr-card" href="module-6-le-service-dns/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 6 : Le service DNS</span>
-    <span class="tssr-card-desc">À compléter.</span>
   </a>
 </div>
