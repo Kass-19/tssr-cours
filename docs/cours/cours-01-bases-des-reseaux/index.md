@@ -1,9 +1,9 @@
 # Cours 1 - Bases des réseaux
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** 15/06/2026 au 19/06/2026
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Thélo GUYADER
 
 Retrouve ici l'ensemble des modules de ce cours.
 
