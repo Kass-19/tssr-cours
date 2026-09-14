@@ -1,9 +1,9 @@
 # Cours 9 - Les services réseau en environnement Linux
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** 14/09/2026
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Cédric RICHEZ
 
 Retrouve ici l'ensemble des modules de ce cours.
 
