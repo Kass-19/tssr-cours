@@ -1,9 +1,9 @@
 # Cours 2 - Système client microsoft
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** 22/06/2026 au 03/07/2026
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Cédric RICHEZ et Hasan KURTULUS
 
 Retrouve ici l'ensemble des modules de ce cours.
 
