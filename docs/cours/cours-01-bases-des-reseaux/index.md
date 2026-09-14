@@ -11,7 +11,6 @@ Retrouve ici l'ensemble des modules de ce cours.
   <a class="tssr-card" href="module-1-le-modele-osi/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 1 : Le modèle OSI</span>
-    <span class="tssr-card-desc">À compléter.</span>
   </a>
   <a class="tssr-card" href="module-2-les-unites-informatiques/">
     <span class="tssr-card-icon">📗</span>
