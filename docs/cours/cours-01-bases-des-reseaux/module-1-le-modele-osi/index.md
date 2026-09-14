@@ -10,20 +10,50 @@ _À compléter._
 
 Le modèle OSI découpe une communication en **sept responsabilités complémentaires**. À l’émission, chaque couche prépare les données pour la couche inférieure ; à la réception, le traitement se fait dans l’ordre inverse.
 
-<figure class="tssr-figure">
-  <div class="tssr-figure__canvas">
-    <div class="tssr-osi-stack" role="img" aria-label="Les sept couches du modèle OSI avec leurs rôles, exemples et unités de données">
-      <div class="tssr-osi-layer" style="--layer-color:#7c5bc4"><span class="tssr-osi-layer__number">7</span><strong>Application</strong><span>Services visibles : HTTP, DNS, SMTP</span><small>Données</small></div>
-      <div class="tssr-osi-layer" style="--layer-color:#8b5fc7"><span class="tssr-osi-layer__number">6</span><strong>Présentation</strong><span>Format, chiffrement TLS, compression</span><small>Données</small></div>
-      <div class="tssr-osi-layer" style="--layer-color:#7568cf"><span class="tssr-osi-layer__number">5</span><strong>Session</strong><span>Ouverture, maintien et reprise du dialogue</span><small>Données</small></div>
-      <div class="tssr-osi-layer" style="--layer-color:#c47a18"><span class="tssr-osi-layer__number">4</span><strong>Transport</strong><span>TCP/UDP, fiabilité et numéros de port</span><small>Segment</small></div>
-      <div class="tssr-osi-layer" style="--layer-color:#3978c5"><span class="tssr-osi-layer__number">3</span><strong>Réseau</strong><span>IPv4/IPv6, choix du chemin, routeur</span><small>Paquet</small></div>
-      <div class="tssr-osi-layer" style="--layer-color:#159574"><span class="tssr-osi-layer__number">2</span><strong>Liaison</strong><span>Ethernet, adresse MAC, commutateur</span><small>Trame</small></div>
-      <div class="tssr-osi-layer" style="--layer-color:#596675"><span class="tssr-osi-layer__number">1</span><strong>Physique</strong><span>Câble, fibre, radio et signaux</span><small>Bits</small></div>
-    </div>
+<div class="tssr-layers">
+  <div class="tssr-layer" style="--layer-color:#8b5cf6;">
+    <span class="tssr-layer-num">7</span>
+    <span class="tssr-layer-name">Application</span>
+    <span class="tssr-layer-desc">Services visibles : HTTP, DNS, SMTP</span>
+    <span class="tssr-layer-tag">Données</span>
   </div>
-  <figcaption>Lecture de haut en bas à l’émission : des données applicatives jusqu’aux bits transportés sur le support.</figcaption>
-</figure>
+  <div class="tssr-layer" style="--layer-color:#8b5cf6;">
+    <span class="tssr-layer-num">6</span>
+    <span class="tssr-layer-name">Présentation</span>
+    <span class="tssr-layer-desc">Format, chiffrement TLS, compression</span>
+    <span class="tssr-layer-tag">Données</span>
+  </div>
+  <div class="tssr-layer" style="--layer-color:#8b5cf6;">
+    <span class="tssr-layer-num">5</span>
+    <span class="tssr-layer-name">Session</span>
+    <span class="tssr-layer-desc">Ouverture, maintien et reprise du dialogue</span>
+    <span class="tssr-layer-tag">Données</span>
+  </div>
+  <div class="tssr-layer" style="--layer-color:#f59e0b;">
+    <span class="tssr-layer-num">4</span>
+    <span class="tssr-layer-name">Transport</span>
+    <span class="tssr-layer-desc">TCP/UDP, fiabilité et numéros de port</span>
+    <span class="tssr-layer-tag">Segment</span>
+  </div>
+  <div class="tssr-layer" style="--layer-color:#3b82f6;">
+    <span class="tssr-layer-num">3</span>
+    <span class="tssr-layer-name">Réseau</span>
+    <span class="tssr-layer-desc">IPv4/IPv6, choix du chemin, routeur</span>
+    <span class="tssr-layer-tag">Paquet</span>
+  </div>
+  <div class="tssr-layer" style="--layer-color:#10b981;">
+    <span class="tssr-layer-num">2</span>
+    <span class="tssr-layer-name">Liaison</span>
+    <span class="tssr-layer-desc">Ethernet, adresse MAC, commutateur</span>
+    <span class="tssr-layer-tag">Trame</span>
+  </div>
+  <div class="tssr-layer" style="--layer-color:#6b7280;">
+    <span class="tssr-layer-num">1</span>
+    <span class="tssr-layer-name">Physique</span>
+    <span class="tssr-layer-desc">Câble, fibre, radio et signaux</span>
+    <span class="tssr-layer-tag">Bits</span>
+  </div>
+</div>
 
 ## 📖 Cours consolidé
 
