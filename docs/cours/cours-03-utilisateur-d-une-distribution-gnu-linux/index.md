@@ -1,9 +1,9 @@
 # Cours 3 - Utilisateur d'une distribution GNU-Linux
 
 !!! abstract "Informations pratiques"
-    **Dates :** _À compléter_
+    **Dates :** 06/072026 au 10/07/2026
 
-    **Formateur(s) :** _À compléter_
+    **Formateur(s) :** Cédric RICHEZ
 
 Retrouve ici l'ensemble des modules de ce cours.
 
