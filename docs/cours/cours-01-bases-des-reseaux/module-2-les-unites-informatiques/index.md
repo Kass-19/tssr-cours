@@ -15,9 +15,6 @@ _À compléter. Tu peux utiliser un diagramme Mermaid — voir un exemple de syn
 
 ## 📖 Cours consolidé
 
-# Module 2 – Les unités informatiques
----
-
 ## 1. Les bases de numération : vue d'ensemble
 
 La **numération** est le système utilisé pour représenter les nombres. En informatique, 4 bases reviennent constamment :
