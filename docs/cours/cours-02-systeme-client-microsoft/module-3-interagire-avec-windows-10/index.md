@@ -12,10 +12,6 @@ _À compléter. Tu peux utiliser un diagramme Mermaid — voir un exemple de syn
 
 ## 📖 Cours consolidé
 
-_À compléter._
-
-## ✅ Points clés à retenir
-
 ## 1. L'interface graphique (GUI)
 
 Chaque utilisateur dispose d'un **profil** personnalisable (bureau, menu Démarrer). Windows 10 permet d'ajouter des **bureaux virtuels supplémentaires** pour agrandir son espace de travail, et propose la fonctionnalité **Timeline** (depuis la build 1803) : un historique des tâches récentes, accessible aussi pour créer de nouveaux bureaux.
@@ -295,6 +291,18 @@ Get-LocalUser demo-user | Select-Object Name, SID | Out-File "C:\users\demo-user
 📌 Cette démonstration illustre bien la méthode générale : **repérer la cmdlet** (`Get-Command`), **comprendre son usage** (`Help`), **filtrer le résultat** (`Where-Object`, `Select-Object`), puis **agir ou exporter** (`Stop-Service`, `Out-File`).
 
 ---
+
+## ✅ Points clés à retenir
+
+- Interface graphique : consoles **MMC** (fichiers `.msc`), panneau de configuration (fichiers `.cpl`) — l'un et l'autre personnalisables.
+- CMD : le **premier mot est toujours une commande**, les paramètres/options sont séparés par des **espaces** ; `help <commande>` pour l'aide détaillée.
+- Syntaxe d'aide universelle : `[ ]`/`{ }` = facultatif, texte nu = obligatoire, `|` = choix, `...` = répétition.
+- PowerShell est **orienté objet** (.NET) ; chaque cmdlet suit la structure **Verbe-Nom** (Get, Set, New, Add, Remove...).
+- `$PSVersionTable` pour vérifier sa version — important pour la **rétrocompatibilité** des scripts.
+- Depuis PowerShell 3, l'aide **doit être téléchargée** via `Update-Help` (droits admin + Internet requis).
+- Un objet PowerShell a des **propriétés** (caractéristiques) et des **méthodes** (actions) — `Select-Object *` affiche toutes les propriétés, `Select-Object <prop1>, <prop2>` filtre.
+- Méthode de travail à retenir : **Get-Command** (trouver) → **Help/Get-Help** (comprendre) → **Where-Object/Select-Object** (filtrer) → agir.
+
 ## 📝 Fiche de révision
 
 _À compléter._
