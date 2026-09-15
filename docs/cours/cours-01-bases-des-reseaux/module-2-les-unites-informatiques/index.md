@@ -4,7 +4,10 @@
 
 ## 🎯 Objectif du module
 
-_À compléter._
+Ce module présente les systèmes de numération utilisés en informatique (binaire, octal, décimal, hexadécimal), les méthodes de conversion entre ces bases, ainsi que les unités de mesure informatiques (bits, octets, multiples, débits).
+
+📌 *Note de réorganisation : le cours source explique chaque base de numération une première fois (principe + un exemple de conversion), puis revient sur les conversions décimal ↔ base dans des sections séparées. Comme la méthode de conversion est **la même pour toutes les bases** (seul le diviseur change), cette fiche la présente **une seule fois de façon générique**, suivie d'un tableau récapitulatif de tous les exemples du cours — plus rapide à réviser qu'une répétition de la même méthode 3 fois.*
+
 
 ## 🖼️ Résumé visuel
 
@@ -13,13 +16,6 @@ _À compléter. Tu peux utiliser un diagramme Mermaid — voir un exemple de syn
 ## 📖 Cours consolidé
 
 # Module 2 – Les unités informatiques
-
-## Objectifs du module
-
-Ce module présente les systèmes de numération utilisés en informatique (binaire, octal, décimal, hexadécimal), les méthodes de conversion entre ces bases, ainsi que les unités de mesure informatiques (bits, octets, multiples, débits).
-
-📌 *Note de réorganisation : le cours source explique chaque base de numération une première fois (principe + un exemple de conversion), puis revient sur les conversions décimal ↔ base dans des sections séparées. Comme la méthode de conversion est **la même pour toutes les bases** (seul le diviseur change), cette fiche la présente **une seule fois de façon générique**, suivie d'un tableau récapitulatif de tous les exemples du cours — plus rapide à réviser qu'une répétition de la même méthode 3 fois.*
-
 ---
 
 ## 1. Les bases de numération : vue d'ensemble
