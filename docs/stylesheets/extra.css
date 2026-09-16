@@ -400,3 +400,7 @@
   .tssr-layer-desc { grid-area: desc; }
   .tssr-layer-tag { grid-area: tag; justify-self: start; }
 }
+
+.md-grid {
+  max-width: min(1600px, 94vw);
+}
