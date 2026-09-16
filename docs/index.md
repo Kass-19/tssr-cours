@@ -27,6 +27,11 @@ Bienvenue sur ton espace personnel de cours et de révision pour la formation **
     <span class="tssr-card-title">Glossaire</span>
     <span class="tssr-card-desc">Tous les termes et acronymes de la formation, avec recherche instantanée.</span>
   </a>
+  <a class="tssr-card" href="revisions/">
+  <span class="tssr-card-icon">📇</span>
+  <span class="tssr-card-title">Révisions</span>
+  <span class="tssr-card-desc">Tes fiches de révision regroupées, pour réviser vite avant l'examen.</span>
+</a>
 </div>
 
 ## Comment utiliser ce site ?
