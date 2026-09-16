@@ -248,6 +248,7 @@ nav:
   - Travaux pratiques:
       - travaux-pratiques/index.md
       - "TP - Plan d'adressage IP": travaux-pratiques/cours-01-bases-des-reseaux/tp-plan-adressage.md
+  - Révisions: revision/index.md
   - Commandes:
       - commandes/index.md
       - PowerShell: commandes/powershell.md
