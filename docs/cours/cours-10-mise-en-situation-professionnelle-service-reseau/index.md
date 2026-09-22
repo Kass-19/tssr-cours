@@ -40,9 +40,9 @@ flowchart TB
     client -->|"192.168.176.254 /24"| r1
     r1 --- wan
 
-    style client fill:#cfe0ee,stroke:#7ea0bb,color:#242424
-    style serveur fill:#d6e6d6,stroke:#8fb28f,color:#242424
-    style wan fill:#e6ddf0,stroke:#b39ddb,color:#242424
+    style client fill:#cfe0ee,stroke:#7ea0bb,color:#000000
+    style serveur fill:#d6e6d6,stroke:#8fb28f,color:#000000
+    style wan fill:#e6ddf0,stroke:#b39ddb,color:#000000
 ```
 
 ## 📖 Cours consolidé
