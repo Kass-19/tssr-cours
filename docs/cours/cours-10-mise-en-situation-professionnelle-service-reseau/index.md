@@ -28,7 +28,7 @@ flowchart TB
 
     subgraph client["Réseau LAN Client — 192.168.179.0/24"]
         s1["Client Windows Win-PC1<br/>192.168.176.10"]
-        s2["Poste Linux Ubuntu1<br/>192.168.176.3"]
+        s2["Poste Linux 1<br/>192.168.176.3"]
     end
 
     r1(("Routeur ROUTEUR-R1<br/>10.107.42.44 /16"))
@@ -40,9 +40,9 @@ flowchart TB
     client -->|"192.168.176.254 /24"| r1
     r1 --- wan
 
-    style client fill:#cfe0ee,stroke:#7ea0bb,color:#1a1a1a
-    style serveur fill:#d6e6d6,stroke:#8fb28f,color:#1a1a1a
-    style wan fill:#e6ddf0,stroke:#b39ddb,color:#1a1a1a
+    style client fill:#cfe0ee,stroke:#7ea0bb,color:#242424
+    style serveur fill:#d6e6d6,stroke:#8fb28f,color:#242424
+    style wan fill:#e6ddf0,stroke:#b39ddb,color:#242424
 ```
 
 ## 📖 Cours consolidé
