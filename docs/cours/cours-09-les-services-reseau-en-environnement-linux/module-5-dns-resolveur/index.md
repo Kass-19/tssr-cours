@@ -8,7 +8,9 @@ Ce module détaille le fonctionnement du service **DNS** (résolution de noms, s
 
 ## 🖼️ Résumé visuel
 
-_À compléter. Tu peux utiliser un diagramme Mermaid — voir un exemple de syntaxe dans le module [L'adressage IPv4](../../cours-01-bases-des-reseaux/module-3-l-adressage-ipv4/index.md)._
+![Service DNS](servicedns.png)
+
+![Service DNS résolveur](servicednsresolveur.png)
 
 ## 📖 Cours consolidé
 
