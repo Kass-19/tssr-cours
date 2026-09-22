@@ -405,3 +405,11 @@
 .md-grid {
   max-width: min(1600px, 94vw);
 }
+
+.tssr-pdf-frame {
+  width: 100%;
+  height: min(85vh, 900px);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
