@@ -11,22 +11,22 @@ Retrouve ici l'ensemble des modules de ce cours.
   <a class="tssr-card" href="module-1-introduction/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 1 : Introduction</span>
-    <span class="tssr-card-desc">À compléter.</span>
+    <span class="tssr-card-desc">
   </a>
   <a class="tssr-card" href="module-2-adressage-reseau/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 2 : Adressage réseau</span>
-    <span class="tssr-card-desc">À compléter.</span>
+    <span class="tssr-card-desc">
   </a>
   <a class="tssr-card" href="module-3-routage-et-traduction-d-adresses/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 3 : Routage et traduction d'adresses</span>
-    <span class="tssr-card-desc">À compléter.</span>
+    <span class="tssr-card-desc">
   </a>
   <a class="tssr-card" href="module-4-administration-a-distance/">
     <span class="tssr-card-icon">📗</span>
     <span class="tssr-card-title">Module 4 : Administration à distance</span>
-    <span class="tssr-card-desc">À compléter.</span>
+    <span class="tssr-card-desc">
   </a>
   <a class="tssr-card" href="module-5-dns-resolveur/">
     <span class="tssr-card-icon">📗</span>
