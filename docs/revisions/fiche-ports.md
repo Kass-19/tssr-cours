@@ -29,22 +29,23 @@ mindmap
 
 ## Tableau détaillé
 
-| Port | Proto | Service | Signification |
+| Port | Protocole | Service | Signification |
 |:---:|:---:|---|---|
-| **20 / 21** | TCP | FTP | Transfert de fichiers non chiffré (20 = données, 21 = commandes) |
-| **22** | TCP | SSH | Administration à distance chiffrée, SFTP, SCP |
-| **23** | TCP | Telnet | Accès distant non chiffré (obsolète) |
-| **25** | TCP | SMTP | Envoi de mails entre serveurs |
-| **53** | UDP/TCP | DNS | Résolution de noms en adresses IP |
-| **67 / 68** | UDP | DHCP | Attribution automatique d'IP (67 = serveur, 68 = client) |
-| **80** | TCP | HTTP | Web non chiffré |
-| **88** | TCP/UDP | Kerberos | Authentification Active Directory |
-| **110** | TCP | POP3 | Récupération des mails (téléchargés puis supprimés du serveur) |
-| **143** | TCP | IMAP | Consultation des mails synchronisée avec le serveur |
-| **389** | TCP/UDP | LDAP | Interrogation de l'annuaire (Active Directory) |
-| **443** | TCP | HTTPS | Web chiffré (TLS) |
-| **445** | TCP | SMB | Partage de fichiers et d'imprimantes Windows |
-| **3389** | TCP | RDP | Bureau à distance Windows |
+| **20 / 21** | TCP | **FTP** — *File Transfer Protocol* | Transfert de fichiers non chiffré (20 = données, 21 = commandes) |
+| **22** | TCP | **SSH** — *Secure Shell* | Administration à distance chiffrée, SFTP, SCP |
+| **23** | TCP | **Telnet** — *Teletype Network* | Accès distant non chiffré (obsolète) |
+| **25** | TCP | **SMTP** — *Simple Mail Transfer Protocol* | Envoi de mails entre serveurs |
+| **53** | UDP/TCP | **DNS** — *Domain Name System* | Résolution de noms en adresses IP |
+| **67 / 68** | UDP | **DHCP** — *Dynamic Host Configuration Protocol* | Attribution automatique d'IP (67 = serveur, 68 = client) |
+| **80** | TCP | **HTTP** — *HyperText Transfer Protocol* | Web non chiffré |
+| **88** | TCP/UDP | **Kerberos** — *pas un acronyme* (chien à trois têtes de la mythologie) | Authentification Active Directory |
+| **110** | TCP | **POP3** — *Post Office Protocol version 3* | Récupération des mails (téléchargés puis supprimés du serveur) |
+| **143** | TCP | **IMAP** — *Internet Message Access Protocol* | Consultation des mails synchronisée avec le serveur |
+| **389** | TCP/UDP | **LDAP** — *Lightweight Directory Access Protocol* | Interrogation de l'annuaire (Active Directory) |
+| **443** | TCP | **HTTPS** — *HyperText Transfer Protocol Secure* | Web chiffré (TLS) |
+| **445** | TCP | **SMB** — *Server Message Block* | Partage de fichiers et d'imprimantes Windows |
+| **3389** | TCP | **RDP** — *Remote Desktop Protocol* | Bureau à distance Windows |
+
 
 ## 💡 Astuces mémo
 
