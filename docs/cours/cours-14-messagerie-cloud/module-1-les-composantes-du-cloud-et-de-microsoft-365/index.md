@@ -303,39 +303,6 @@ TXT MS=MS=xxxxxxxxxxxx
 
 Une fois les enregistrements configurés et vérifiés, tous les mails envoyés à `votredomaine.fr` sont routés vers les boîtes aux lettres des utilisateurs du tenant.
 
----
-
-## 9. Démonstration — Création du tenant
-
-### 9.1 Achat d'un nom de domaine (OVH)
-
-Après création ou connexion au compte OVH, direction la partie **Web Cloud** pour commander un nom de domaine, par exemple `celdemo.xyz` (coût très faible, de l'ordre de 99 centimes) :
-
-```text
-ajouter_au_panier("celdemo.xyz")
-```
-
-La commande se poursuit sans options supplémentaires, puis les informations de paiement sont renseignées.
-
-### 9.2 Création du tenant Microsoft 365
-
-En attendant que le nom de domaine apparaisse dans la console OVH (quelques minutes), le tenant Microsoft 365 est créé en recherchant **« Microsoft 365 trial tenant »** sur un moteur de recherche, puis en suivant le premier lien vers la page de création de l'offre **Office 365 E3** en version d'essai :
-
-1. Entrer une adresse email professionnelle ou scolaire, cliquer sur « suivant ».
-2. Configurer le compte : informations de base, numéro de téléphone (vérification par SMS ou appel).
-3. Configurer le nom de domaine `onmicrosoft.com` (ex. **CEL Demo**).
-4. Renseigner les informations du premier compte utilisateur, désigné comme **admin**.
-
-### 9.3 Vérification du domaine et finalisation
-
-Pour prouver la possession de la zone DNS, un enregistrement **TXT** est ajouté dans la console OVH :
-
-```text
-ajouter_enregistrement_dns("ms=<suite de chiffres>")
-```
-
-La zone DNS est ensuite nettoyée des enregistrements inutiles. Une fois tous les enregistrements mis à jour, Microsoft vérifie leur présence ; une fois validés, l'installation est terminée et le centre d'administration du tenant devient accessible, prêt à configurer des utilisateurs et envoyer des emails.
-
 
 ## ✅ Points clés à retenir
 
