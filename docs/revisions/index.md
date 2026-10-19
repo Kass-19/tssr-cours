@@ -7,3 +7,4 @@ Sommaire de toutes tes fiches de révision. Clique sur un titre pour aller direc
 - [Le DHCP et configuration DNS](fiche-DHCP-config-DNS.md)
 - [Les Ports](fiche-ports.md)
 - [Le Sysprep](fiche-sysprep.md)
+- [Les types de Cloud](fiche-cloud.md)
