@@ -8,7 +8,47 @@ Ce module pose les bases nécessaires à la compréhension du Cloud et de Micros
 
 ## 🖼️ Résumé visuel
 
-_À compléter. Tu peux utiliser un diagramme Mermaid — voir un exemple de syntaxe dans le module [L'adressage IPv4](../../cours-01-bases-des-reseaux/module-3-l-adressage-ipv4/index.md)._
+```mermaid
+flowchart TB
+    A1["📱 Applications"]
+    A2["⚙️ Middleware / Runtimes"]
+    A3["🖥️ Système d'exploitation"]
+    A4["🧊 Virtualisation"]
+    A5["🗄️ Serveurs / Stockage"]
+    A6["🔌 Réseau"]
+    A7["🏭 Datacenter"]
+    A1 --- A2 --- A3 --- A4 --- A5 --- A6 --- A7
+    S["🟥 <b>SaaS</b> fournit<br/>toute la pile"] -.-> A1
+    P["🟧 <b>PaaS</b> fournit<br/>à partir du middleware"] -.-> A2
+    I["🟦 <b>IaaS</b> fournit<br/>à partir de la virtualisation"] -.-> A4
+    classDef saas fill:#f8d7da,stroke:#c0392b,color:#000
+    classDef paas fill:#ffe5c2,stroke:#e67e22,color:#000
+    classDef iaas fill:#d6e9fb,stroke:#2e86c1,color:#000
+    class A1,S saas
+    class A2,A3,P paas
+    class A4,A5,A6,A7,I iaas
+```
+
+```mermaid
+flowchart LR
+    subgraph PUB["☁️ Cloud PUBLIC"]
+        P1["Matériel du fournisseur"]
+        P2["Ressources mutualisées"]
+        P3["Ex. Azure, Office 365"]
+    end
+    subgraph PRIV["🔒 Cloud PRIVÉ"]
+        R1["Matériel dédié"]
+        R2["Datacenter tiers ou interne"]
+        R3["Ex. Oceanet, Bretagne Télécom"]
+    end
+    subgraph HYB["🔀 Cloud HYBRIDE"]
+        H1["Local + privé + public"]
+        H2["Ex. Office 365 + baie dédiée pour le PRA"]
+    end
+    PUB --> HYB
+    PRIV --> HYB
+```
+
 
 ## 📖 Cours consolidé
 
@@ -117,6 +157,20 @@ L'IaaS permet d'accéder à des **ressources matérielles et logicielles** : l'h
 
 Le **cloud hybride** combine ainsi hébergement local, cloud privé et cloud public afin de mieux maîtriser les coûts, la sécurité et les performances — par exemple en utilisant Office 365 (cloud public) tout en conservant une baie dédiée dans un datacenter pour assurer la continuité de service, notamment dans le cadre d'un **plan de reprise d'activité (PRA)**.
 
+```mermaid
+quadrantChart
+    title Positionnement des types de cloud
+    x-axis "Coût faible" --> "Coût élevé"
+    y-axis "Contrôle faible" --> "Contrôle élevé"
+    quadrant-1 "Maîtrise maximale"
+    quadrant-2 "Idéal mais rare"
+    quadrant-3 "Simplicité"
+    quadrant-4 "À éviter"
+    "Cloud public": [0.2, 0.25]
+    "Cloud hybride": [0.5, 0.6]
+    "Cloud privé": [0.8, 0.85]
+```
+
 ### 3.2 Héberger en local ou dans le Cloud ?
 
 La question de l'hébergement local n'a pas de réponse universelle : tout dépend des cas d'usage. En cas d'hébergement Cloud, l'entreprise devient fortement dépendante de la qualité de son accès Internet (débit et fiabilité).
@@ -192,6 +246,31 @@ La toute première adresse email fut celle de **Ray Tomlinson** (`tomlinson@bbn-
 
 📌 La dépendance entre Exchange, Office 365 et Active Directory est structurante : **Azure Active Directory** est indispensable à Microsoft 365, tout comme **Active Directory** l'est à la messagerie dans un environnement Exchange local.
 
+```mermaid
+timeline
+    title De l'e-mail à Office 365
+    1971 : Premier e-mail par Ray Tomlinson
+         : Contenu « QWERTYUIOP » (1re ligne du clavier)
+    Début 90s : MS Mail 3.5
+    1996 : Exchange 4.0
+         : Basé sur X.400
+         : Vocabulaire MTA, MDA…
+    1997 : Exchange 5.0
+         : 1er client web Outlook Web Access
+    2000 : Exchange 2000
+         : S'appuie sur l'Active Directory de Windows 2000
+    2003 : Exchange 2003
+         : RPC sur HTTPS et ActiveSync
+    2007 : Exchange 2007
+         : Haute dispo LCR CCR SCR
+         : Premiers pas de PowerShell
+    2010 : Exchange 2010
+         : 64 bits uniquement
+         : DAG, ECP, Outlook Web App
+    Juin 2011 : Naissance d'Office 365
+    2019 : Exchange 2019
+```
+
 ---
 
 ## 6. Vocabulaire et serveur de messagerie interne
@@ -220,6 +299,28 @@ Le déroulement est alors le suivant :
 3. Le message est transmis au **MTA**, qui l'envoie en **SMTP** au MTA du serveur Exchange destinataire.
 4. Le **MDA** du serveur Exchange recherche la boîte aux lettres de Micheline et y dépose le mail.
 5. Le client de messagerie de Micheline (Outlook, ou un client web comme Firefox) est notifié qu'un mail est disponible au téléchargement, via **POP3**, **IMAP4**, **ActiveSync**, ou **MAPI sur HTTPS**, selon sa configuration.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor JP as 👨 Jean-Pierre<br/>(MUA Outlook)
+    participant MSA as 📤 MSA<br/>Serveur Gmail
+    participant MTA1 as 🚚 MTA<br/>Serveur Gmail
+    participant MTA2 as 🚚 MTA<br/>Serveur Exchange
+    participant MDA as 📥 MDA<br/>Serveur Exchange
+    actor MI as 👩 Micheline<br/>(MUA Firefox / Outlook)
+
+    JP->>JP: Rédige le mail → boîte d'envoi
+    JP-->>MSA: Signale qu'un mail est prêt
+    MSA->>JP: Récupère le message
+    MSA->>MSA: Copie dans « Éléments envoyés »
+    MSA->>MTA1: Transmission
+    MTA1->>MTA2: SMTP
+    MTA2->>MDA: Remise
+    MDA->>MDA: Cherche la BAL de Micheline et dépose le mail
+    MDA-->>MI: Notification « nouveau mail »
+    MI->>MDA: Téléchargement via POP3 / IMAP / MAPI sur HTTPS
+```
 
 Dans un environnement Active Directory interne (ex. domaine `Crêpes.local`), chaque brique a un rôle précis : le **serveur AD/DNS**, le **MDA** (serveur Mailbox Exchange), le **MTA** (serveur SMTP Exchange), et les postes clients équipés d'un **MUA**.
 
@@ -258,6 +359,30 @@ Prenons l'exemple de Jean-Pierre (domaine interne `creb.pdl`) envoyant un mail �
 5. Le serveur Edge vérifie la validité de l'enregistrement **SPF** du serveur expéditeur (confirmant que l'IP source est bien autorisée à envoyer pour ce domaine), puis effectue une analyse **anti-virus** et **anti-spam**.
 6. Une fois validé, le message est transmis au **MTA interne** sur le port 25, qui effectue une requête **LDAP** pour localiser la boîte aux lettres de Micheline et y dépose l'email.
 7. Micheline récupère son mail via son protocole client (**POP3**, **IMAP4**) ou via une interface web (**Outlook Web App**).
+
+```mermaid
+flowchart LR
+    subgraph CREPES["🏢 Crêpes.pdl (interne)"]
+        JP["👨 MUA<br/>Jean-Pierre"] --> MSA["📤 MSA"] --> MTA1["🚚 MTA"]
+    end
+    MTA1 -- "1️⃣ Requête DNS :<br/>MX de galettes.bzh ?" --> DNS[("🌍 DNS de l'hébergeur<br/>galettes.bzh MX<br/>→ 122.206.5.202")]
+    DNS -- "2️⃣ Réponse :<br/>122.206.5.202" --> MTA1
+    MTA1 == "3️⃣ SMTP port 25" ==> FW["🧱 Routeur<br/>122.206.5.202<br/>DNAT port 25"]
+    subgraph GALETTES["🏢 Galettes.lcl (interne)"]
+        subgraph DMZ["🛡️ DMZ"]
+            EDGE["Serveur Edge<br/>relais SMTP<br/>✔ SPF<br/>✔ Antivirus<br/>✔ Antispam"]
+        end
+        MTA2["🚚 MTA interne"]
+        AD[("📒 Active Directory<br/>requête LDAP")]
+        MDA["📥 MDA<br/>BAL Micheline"]
+        MI["👩 MUA<br/>Micheline"]
+    end
+    FW --> EDGE
+    EDGE -- "4️⃣ port 25" --> MTA2
+    MTA2 -- "5️⃣ Où est la BAL ?" --> AD
+    MTA2 --> MDA
+    MDA -- "6️⃣ POP3 / IMAP4 / OWA" --> MI
+```
 
 📌 Cet enchaînement illustre pourquoi la messagerie d'entreprise combine systématiquement DNS, NAT et sécurité applicative (SPF, antivirus, antispam) avant même que le message n'atteigne la boîte aux lettres du destinataire.
 
